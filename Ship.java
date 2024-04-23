@@ -15,7 +15,7 @@ public class Ship {
             this.randomAlgorithms = new RandomAlgorithms();
         }
 
-        public void addPerson(Person person){
+        private void addPerson(Person person){
             int attempts = 0;
             boolean successful = false;
             while (!successful && attempts < 3){

@@ -21,7 +21,11 @@ public class Room {
     }
 
     public void removePerson(int index){
-        this.persons.remove(index);
+        if (this.persons.get(index) != null){
+            // System.out.println("Place is already taken");
+            this.persons.remove(index);
+        }
+        throw new IllegalArgumentException();
     }
 
     public boolean isFull(){

@@ -11,4 +11,6 @@ public class RandomAlgorithms {
     public int hash3(int key){
         return ((key * 31) % 100) + 1;
     }
+
+    
 }
