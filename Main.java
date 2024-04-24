@@ -26,11 +26,18 @@ public class Main {
             0.35, 
             0.3
             );
+        // planetBeta.setEventProbability(
+        //     0.4, 
+        //     0.2, 
+        //     0, 
+        //     0.4, 
+        //     0
+        //     );
         planetBeta.setEventProbability(
-            0.4, 
-            0.2, 
             0, 
-            0.4, 
+            1, 
+            0, 
+            0, 
             0
             );
         planetSigma.setEventProbability(

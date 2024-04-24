@@ -28,6 +28,15 @@ public class Room {
         throw new IllegalArgumentException();
     }
 
+    public boolean removeRandomPerson(){
+        int index = (int) (Math.random() * 4);
+        if (this.persons.get(index) != null){
+            this.persons.set(index, null);
+            return true;
+        }
+        return false;
+    }
+
     public boolean isFull(){
         return this.persons.size() == 4;
     }
@@ -42,5 +51,9 @@ public class Room {
 
     public Person getPerson (int index){
         return this.persons.get(index);
+    }
+
+    public void setPerson(Person person, int index){
+        this.persons.set(index, person);
     }
 }

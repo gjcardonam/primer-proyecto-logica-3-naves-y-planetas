@@ -1,16 +1,15 @@
-import java.util.ArrayList;
 import java.util.Random;
 
 public class Asteroid extends Event {
-    private ArrayList<Integer> ids;
+    public int[] ids;
 
     public Asteroid() {
         super("Asteroid", "Asteroid strike");
-        ids = new ArrayList<>();
+        ids = new int[1000];
         Random random = new Random();
         for (int i = 0; i < 1000; i++) {
-            int randomId = random.nextInt(101); // Genera un número aleatorio entre 0 y 100
-            ids.add(randomId);
+            int randomId = random.nextInt(100); // Genera un número aleatorio entre 0 y 100
+            ids[i] = randomId;
         }
     }
 

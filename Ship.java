@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Ship {
@@ -25,8 +26,8 @@ public class Ship {
                         n = this.randomAlgorithms.hash2(person.getId());
                     if (attempts == 2)
                         n = this.randomAlgorithms.hash3(person.getId());
-                    double indexRoom = Math.ceil(n / 4);
-                    int i = (int) Math.ceil(indexRoom / 5);
+                    double indexRoom = n / 4;
+                    int i = (int) indexRoom / 5;
                     int j = (int ) indexRoom % 5;
                     this.rooms[i][j].assignPlace(person, (int) n % 4);
                     successful = true;
@@ -79,15 +80,25 @@ public class Ship {
                 case "Air Poisonous Scape":
                     break;
                 case "Asteroid":
+                    Asteroid asteroids = (Asteroid) event;
+                    int[]arr = asteroids.ids;
+                    randomAlgorithms.quickSort(arr);
+                    int deads = 0;
+                    for (int n : arr) {
+                        double indexRoom = n / 4;
+                        int i = (int) indexRoom / 5;
+                        int j = (int ) indexRoom % 5;
+                        if (this.rooms[i][j].removeRandomPerson())
+                            deads++;
+                    }
+                    System.out.println(arr.length + " asteroids hit the ship.");
+                    System.out.println("Total deads: " + deads);
                     break;
                 case "Mental Sickness":
                     break;
                 case "Pirates":
                     break;
                 case "Solar Storm":
-                    break;
-                
-                default:
                     break;
             }
         }
