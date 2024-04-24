@@ -1,7 +1,4 @@
-import java.util.List;
-
 public class RandomAlgorithms {
-    private static final int P = 16;
 
     public int hash1(int key){
         return (key % 100) + 1;
