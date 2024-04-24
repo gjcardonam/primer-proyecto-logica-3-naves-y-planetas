@@ -16,6 +16,12 @@ public class Ship {
             this.randomAlgorithms = new RandomAlgorithms();
         }
 
+        public void board(Person[] persons){
+            for (Person person : persons){
+                this.addPerson(person);
+            }
+        }
+
         private void addPerson(Person person){
             int attempts = 0;
             boolean successful = false;
@@ -39,12 +45,6 @@ public class Ship {
 
             // System.out.println("Person " + person.getName() + " with id " + person.getId() + " was assigned to room " + i + " " + j + " " + " place " + (int) n % 4);
 
-        }
-
-        public void board(Person[] persons){
-            for (Person person : persons){
-                this.addPerson(person);
-            }
         }
 
         // public Room getRoom(int x, int y){
@@ -82,7 +82,7 @@ public class Ship {
                 case "Asteroid":
                     Asteroid asteroids = (Asteroid) event;
                     int[]arr = asteroids.ids;
-                    randomAlgorithms.quickSort(arr);
+                    randomAlgorithms.ordering(arr);
                     int deads = 0;
                     for (int n : arr) {
                         double indexRoom = n / 4;
@@ -97,6 +97,9 @@ public class Ship {
                 case "Mental Sickness":
                     break;
                 case "Pirates":
+                    // Pirates pirates = (Pirates) event;
+                    // int[]arr2 = pirates.ids;
+
                     break;
                 case "Solar Storm":
                     break;

@@ -1,4 +1,7 @@
+import java.util.List;
+
 public class RandomAlgorithms {
+    private static final int P = 16;
 
     public int hash1(int key){
         return (key % 100) + 1;
@@ -12,7 +15,7 @@ public class RandomAlgorithms {
         return ((key * 31) % 100) + 1;
     }
 
-    public void quickSort(int[] arr){
+    public void ordering(int[] arr){
         deterministicQuickSort(arr, 0, arr.length - 1);
     }
 
@@ -40,5 +43,4 @@ public class RandomAlgorithms {
         arr[high] = temp;
         return i + 1;
     }
-    
 }

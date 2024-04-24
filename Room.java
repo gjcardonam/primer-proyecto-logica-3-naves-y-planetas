@@ -23,7 +23,7 @@ public class Room {
     public void removePerson(int index){
         if (this.persons.get(index) != null){
             // System.out.println("Place is already taken");
-            this.persons.remove(index);
+            this.persons.set(index, null);
         }
         throw new IllegalArgumentException();
     }
@@ -37,13 +37,13 @@ public class Room {
         return false;
     }
 
-    public boolean isFull(){
-        return this.persons.size() == 4;
-    }
+    // public boolean isFull(){
+    //     return this.persons.size() == 4;
+    // }
 
-    public boolean isEmpty(){
-        return this.persons.size() == 0;
-    }
+    // public boolean isEmpty(){
+    //     return this.persons.size() == 0;
+    // }
 
     public List<Person> getPersons(){
         return this.persons;
@@ -51,9 +51,5 @@ public class Room {
 
     public Person getPerson (int index){
         return this.persons.get(index);
-    }
-
-    public void setPerson(Person person, int index){
-        this.persons.set(index, person);
     }
 }

@@ -1,4 +1,3 @@
-
 public class Main {
     public static void main(String[] args) {
 
@@ -19,12 +18,19 @@ public class Main {
         Route route = new Route();
 
         // Settings
+        // planetGama.setEventProbability(
+        //     0,
+        //     0, 
+        //     0.35, 
+        //     0.35, 
+        //     0.3
+        //     );
         planetGama.setEventProbability(
             0,
             0, 
-            0.35, 
-            0.35, 
-            0.3
+            0, 
+            1, 
+            0
             );
         // planetBeta.setEventProbability(
         //     0.4, 
