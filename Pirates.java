@@ -1,6 +1,6 @@
 public class Pirates extends Event {
     public Pirates() {
-        super("Pirate invasion");
+        super("Pirates", "Space pirates invasion");
     }
 
     @Override

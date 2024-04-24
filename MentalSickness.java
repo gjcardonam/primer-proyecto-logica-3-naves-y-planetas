@@ -1,6 +1,6 @@
 public class MentalSickness extends Event{
     public MentalSickness(){
-        super("Mental sickness outbreak");
+        super("Mental Sickness", "Mental sickness outbreak");
     }
 
     @Override

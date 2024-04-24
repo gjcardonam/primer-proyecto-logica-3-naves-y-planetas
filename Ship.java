@@ -67,8 +67,28 @@ public class Ship {
             Node node = route.getHead();
             while (node != null){
                 System.out.println("Traveling to " + node.getPlanet().getName());
-                node.getPlanet().generateEvent().occur();
+                Event event = node.getPlanet().generateEvent();
+                handleEvent(event);
                 node = node.getNext();
+            }
+        }
+
+        private void handleEvent(Event event){
+            event.occur();
+            switch (event.getName()) {
+                case "Air Poisonous Scape":
+                    break;
+                case "Asteroid":
+                    break;
+                case "Mental Sickness":
+                    break;
+                case "Pirates":
+                    break;
+                case "Solar Storm":
+                    break;
+                
+                default:
+                    break;
             }
         }
 

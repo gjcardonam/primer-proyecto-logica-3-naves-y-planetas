@@ -1,6 +1,6 @@
 public class SolarStorm extends Event{
     public SolarStorm(){
-        super("Solar storm event");
+        super("Solar Storm", "Solar storm disruption");
     }
 
     @Override

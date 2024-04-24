@@ -5,7 +5,7 @@ public class Asteroid extends Event {
     private ArrayList<Integer> ids;
 
     public Asteroid() {
-        super("Asteroid impact");
+        super("Asteroid", "Asteroid strike");
         ids = new ArrayList<>();
         Random random = new Random();
         for (int i = 0; i < 1000; i++) {

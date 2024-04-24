@@ -1,6 +1,6 @@
 public class AirPoisonousScape extends Event{
     public AirPoisonousScape(){
-        super("Poisonous air event");
+        super("Air Poisonous Scape", "The air has become poisonous on the planet!");
     }
 
     @Override
